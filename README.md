@@ -24,3 +24,11 @@ It was fun but not challenging. So while playing I asked what the distribution o
 ## Demo
 
 Open up [tks.now.sh](https://tks.now.sh/) and start playing
+
+## Todo
+
+- routing to home
+- bug number of rounds not reset
+- save result in db
+- overall charts
+- emoticons as players
