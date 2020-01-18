@@ -20,3 +20,7 @@ tempolytseslak? tempo lytse slak is `friesisch`for `hurry up little slug` or ger
 ## Why?
 
 It was fun but not challenging. So while playing I asked what the distribution of winnings would be after many many many games. So I wanted to program the game and get statistics after many rounds.
+
+## Demo
+
+Open up [tks.now.sh](https://tks.now.sh/) and start playing

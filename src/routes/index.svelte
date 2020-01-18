@@ -41,13 +41,6 @@
   </figcaption>
 </figure>
 
-<p>
-  <strong>
-    Running the project However you get the code, you can install dependencies
-    and run the project in development mode with:
-  </strong>
-</p>
-<p>yarn install yarn dev Open up localhost:3000 and start playing</p>
 <h2>tempolytseslak?</h2>
 <p>
   tempolytseslak? tempo lytse slak is friesischfor hurry up little slug or
