@@ -276,7 +276,14 @@
           class="row"
           style={`background-color: ${player.p === 0 || player.p < index ? player.color : player.color}`}>
           <div>{index + 1}:{player.p}</div>
-          <div>{player.p === 0 ? 'START' : 'RUNNING'}</div>
+          <div>
+            <!-- {player.p === 0 ? 'START' : 'RUNNING'} -->
+            ________
+            <progress
+              class="progress is-link"
+              value={player.p}
+              max={settings.length - 1} />
+          </div>
           {#each length as col, index}
             <div>{player.p === 0 || player.p < index ? ' ' : '🐌'}</div>
           {/each}
@@ -285,10 +292,12 @@
 
     </div>
   </section>
-  <div>
-    <canvas id="myChart" width="480" height="200" />
-    {#if game.winner}
-      <p>Winner: {game.winner}:</p>
-    {/if}
-  </div>
+  <section class="section">
+    <div>
+      <canvas id="myChart" width="480" height="200" />
+      {#if game.winner}
+        <p>Winner: {game.winner}:</p>
+      {/if}
+    </div>
+  </section>
 </div>

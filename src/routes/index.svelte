@@ -1,56 +1,78 @@
-<style>
-  h1,
-  figure,
-  p {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0 0 0.5em 0;
-  }
-
-  figure {
-    margin: 0 0 1em 0;
-  }
-
-  p {
-    margin: 1em auto;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
-  }
-</style>
+<script>
+  import Game from "../components/game/index.svelte";
+</script>
 
 <svelte:head>
-  <title>tempolytseslak</title>
+  <title>tempo lytse slak</title>
 </svelte:head>
+<section>
+  <article>
+    <div class="box">
+      <h4 class="title is-6">tempolytseslak??</h4>
+      <p>
+        tempolytseslak? tempo lytse slak is friesischfor hurry up little slug or
+        german Tempo kleine Schnecke. Tempo kleine Schnecke is a board game i
+        played with my little son.
+      </p>
+    </div>
+  </article>
+</section>
+<section>
 
-<h1>tempolytseslak</h1>
+  <article>
+    <div class="box">
+      <h4 class="title is-6">Why???</h4>
+      <p>
+        It was fun but not challenging. So while playing I asked what the
+        distribution of winnings would be after many many many games. So I
+        wanted to program the game and get statistics after many rounds.
+      </p>
+    </div>
+  </article>
+</section>
 
-<figure>
-  <figcaption>
-    Time to deepen and train my svelte and sapper knowledge. This is a small
-    game simulation with game statistics. Also trying BULMA for the first time.
-  </figcaption>
-</figure>
+<Game />
 
-<h2>tempolytseslak?</h2>
-<p>
-  tempolytseslak? tempo lytse slak is friesischfor hurry up little slug or
-  german Tempo kleine Schnecke. Tempo kleine Schnecke is a board game i played
-  with my little son.
-</p>
-
-<h2>Why?</h2>
-<p>
-  It was fun but not challenging. So while playing I asked what the distribution
-  of winnings would be after many many many games. So I wanted to program the
-  game and get statistics after many rounds.
-</p>
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <img
+          src="https://www.funami.de/wp-content/themes/2015/images/funami.jpg"
+          alt="Image" />
+      </figure>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <h1>tempolytseslak</h1>
+        <p>
+          <strong>by Daniel Weber</strong>
+          <small>@fvnami</small>
+          <br />
+          Pragmatic and detailed frontend developer
+        </p>
+        <p>
+          <span class="icon has-text-info">
+            <i class="fas fa-info-circle" />
+          </span>
+          <span class="icon has-text-success">
+            <i class="fas fa-check-square" />
+          </span>
+          <span class="icon has-text-warning">
+            <i class="fas fa-exclamation-triangle" />
+          </span>
+          <span class="icon has-text-danger">
+            <i class="fas fa-ban" />
+          </span>
+        </p>
+        <figure>
+          <figcaption>
+            Time to deepen and train my svelte and sapper knowledge. This is a
+            small game simulation with game statistics. Also trying BULMA for
+            the first time.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+</div>
