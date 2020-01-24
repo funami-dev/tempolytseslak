@@ -320,6 +320,7 @@
     <div>
       <h3>Whats next??</h3>
       <ul>
+        <li>[ ] create sessionId and give every game a url</li>
         <li>
           [ ] Create big big data-trash ::: save all results to an mongo db
         </li>
