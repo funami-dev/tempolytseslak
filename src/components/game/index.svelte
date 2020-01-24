@@ -316,4 +316,21 @@
       {/if}
     </div>
   </section>
+  <section class="section">
+    <div>
+      <h3>Whats next??</h3>
+      <ul>
+        <li>
+          [ ] Create big big data-trash ::: save all results to an mongo db
+        </li>
+        <li>[ ] Create overall statistics from data-trash</li>
+        <li>[ ] calculate co^2 waste of this project</li>
+        <li>[ ] Twitter-Account and automation</li>
+        <li>[ ] pr for to make tks an epic e-sport</li>
+        <li>[ ] online-bets!!! make mo money</li>
+        <li>[ ] use money to travel to mars BEFORE Elon Musk!</li>
+        <li>Project complete - Thanks</li>
+      </ul>
+    </div>
+  </section>
 </div>

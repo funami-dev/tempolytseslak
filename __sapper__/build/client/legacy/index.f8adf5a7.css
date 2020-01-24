@@ -15279,4 +15279,4 @@ readers do not read off random characters that represent icons */
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
-.game.svelte-1qab4f5{display:grid}.row.svelte-1qab4f5{display:flex;justify-content:space-between;align-content:stretch;align-items:flex-start}#myChart.svelte-1qab4f5{background:#fff}
+.game.svelte-3jl8eg{display:grid}.row.svelte-3jl8eg{display:flex;justify-content:space-between;align-content:stretch;align-items:flex-start}.progress-line.svelte-3jl8eg{width:120px;align-self:center;justify-self:flex-start}.player-line.svelte-3jl8eg{width:20px;align-self:center;justify-self:flex-start}.info-line.svelte-3jl8eg{width:20px;align-self:center;justify-self:flex-start}#myChart.svelte-3jl8eg{background:#fff}
