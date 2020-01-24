@@ -51,20 +51,6 @@
           <br />
           Pragmatic and detailed frontend developer
         </p>
-        <p>
-          <span class="icon has-text-info">
-            <i class="fas fa-info-circle" />
-          </span>
-          <span class="icon has-text-success">
-            <i class="fas fa-check-square" />
-          </span>
-          <span class="icon has-text-warning">
-            <i class="fas fa-exclamation-triangle" />
-          </span>
-          <span class="icon has-text-danger">
-            <i class="fas fa-ban" />
-          </span>
-        </p>
         <figure>
           <figcaption>
             Time to deepen and train my svelte and sapper knowledge. This is a
