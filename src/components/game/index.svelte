@@ -317,7 +317,7 @@
     </div>
   </section>
   <section class="section">
-    <div>
+    <div class="container">
       <h3>Whats next??</h3>
       <ul>
         <li>[ ] create sessionId and give every game a url</li>
@@ -331,6 +331,10 @@
         <li>[ ] online-bets!!! make mo money</li>
         <li>[ ] use money to travel to mars BEFORE Elon Musk!</li>
         <li>Project complete - Thanks</li>
+      </ul>
+      <h3>Known Issues</h3>
+      <ul>
+        <li>500 SSR INPUT Field</li>
       </ul>
     </div>
   </section>
