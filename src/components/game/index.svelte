@@ -201,6 +201,21 @@
     align-content: stretch;
     align-items: flex-start;
   }
+  .progress-line {
+    width: 120px;
+    align-self: center;
+    justify-self: flex-start;
+  }
+  .player-line {
+    width: 20px;
+    align-self: center;
+    justify-self: flex-start;
+  }
+  .info-line {
+    width: 20px;
+    align-self: center;
+    justify-self: flex-start;
+  }
   #myChart {
     background: #fff;
   }
@@ -275,17 +290,18 @@
         <div
           class="row"
           style={`background-color: ${player.p === 0 || player.p < index ? player.color : player.color}`}>
-          <div>{index + 1}:{player.p}</div>
-          <div>
+          <div class="info-line">{index + 1}:{player.p}</div>
+          <div class="progress-line">
             <!-- {player.p === 0 ? 'START' : 'RUNNING'} -->
-            ________
             <progress
               class="progress is-link"
               value={player.p}
               max={settings.length - 1} />
           </div>
           {#each length as col, index}
-            <div>{player.p === 0 || player.p < index ? ' ' : '🐌'}</div>
+            <div class="player-line">
+              {player.p === 0 || player.p < index ? ' ' : '🐌'}
+            </div>
           {/each}
         </div>
       {/each}
