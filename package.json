@@ -6,13 +6,16 @@
     "dev": "sapper dev",
     "build": "sapper build --legacy",
     "export": "sapper export --legacy",
+    "export:now": "sapper export --legacy && now --prod",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "test": "run-p --race dev cy:run",
+    "test:e2e": "jest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
+    "@types/jest": "^24.9.1",
     "bulma": "^0.8.0",
     "chart.js": "^2.9.3",
     "compression": "^1.7.1",
@@ -22,9 +25,6 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "sapper": "^0.27.0",
-    "svelte": "^3.0.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
@@ -33,9 +33,19 @@
     "@rollup/plugin-commonjs": "^11.0.0",
     "@rollup/plugin-node-resolve": "^6.0.0",
     "@rollup/plugin-replace": "^2.2.0",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
+    "jest-dev-server": "^4.4.0",
+    "jest-image-snapshot": "^2.12.0",
+    "jest-puppeteer": "^4.4.0",
+    "npm-run-all": "^4.1.5",
+    "puppeteer": "^2.0.0",
     "rollup": "^1.20.0",
     "rollup-plugin-babel": "^4.0.2",
     "rollup-plugin-svelte": "^5.0.1",
-    "rollup-plugin-terser": "^4.0.4"
+    "rollup-plugin-terser": "^4.0.4",
+    "sapper": "^0.27.0",
+    "svelte": "^3.0.0"
   }
 }
