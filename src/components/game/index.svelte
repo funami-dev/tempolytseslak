@@ -39,6 +39,8 @@
     datasets: []
   };
 
+  let showPatch = false;
+
   $: myChart = null;
   $: T = [];
 
@@ -69,6 +71,7 @@
 
   function endGame() {
     game.running = false;
+    showPatch = true;
     prepareDataForChart();
     createChart();
   }
@@ -276,21 +279,18 @@
       </p>
     </div>
     <div class="container">
-      <!-- {#if game.rounds.length} -->
-      <Button
-        disabled={!game.winner || game.running}
-        type="is-danger"
-        on:click={resetGame}>
-        RESET
-      </Button>
-      <!-- {:else} -->
       <Button
         type="is-primary"
         disabled={game.winner || game.running}
         on:click={startGame}>
         START
       </Button>
-      <!-- {/if} -->
+      <Button
+        disabled={!game.winner || game.running}
+        type="is-danger"
+        on:click={resetGame}>
+        RESET
+      </Button>
 
       <!-- TODO: one button solution -->
       <!-- <Button
@@ -328,7 +328,7 @@
       <canvas id="myChart" width="480" height="200" />
       {#if game.winner}
         <p>Winner: {game.winner}:</p>
-        <Modal bind:active={game['winner']}>
+        <Modal bind:active={showPatch}>
           <div
             style="text-align:center;background: url(winnersnail.svg) center;
             background-size: cover;width:621px;height:610px;">

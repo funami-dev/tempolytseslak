@@ -30,5 +30,4 @@ Open up [tks.now.sh](https://tks.now.sh/) and start playing
 - bug number of rounds not reset
 - save result in db
 - overall charts
-- emoticons as players
 - presets games: like Fruits, Cars, Hearts etc.
