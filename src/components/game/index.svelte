@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
-  import { Button, Input } from "svelma";
+  import { Button, Input, Modal } from "svelma";
+  import randomEmoji from "random-emoji";
 
   import "bulma/css/bulma.css";
   import "@fortawesome/fontawesome-free/css/all.css";
@@ -95,7 +96,7 @@
 
       game = {
         ...game,
-        winner: winner[0].color // TODO: winner.length > 1 ? winner.map(el => el.color) :
+        winner: winner[0].char // TODO: winner.length > 1 ? winner.map(el => el.color) :
       };
       // console.log(winner[0].p);
 
@@ -124,9 +125,14 @@
   }
 
   function prepareGame() {
+    const chars = randomEmoji.random({ count: settings.players });
+
     T = [];
     for (let index = 1; index <= settings.players; index++) {
-      T = [...T, { p: 0, color: random_rgba() }];
+      T = [
+        ...T,
+        { p: 0, color: random_rgba(), char: chars[index - 1].character }
+      ];
     }
   }
 
@@ -157,6 +163,7 @@
         set.data = [...set.data, el.s[(set.label - 1).toString()].p];
       });
     });
+    chartData.datasets.map(el => (el.label = T[el.label - 1].char));
   }
 
   function rollDices() {
@@ -221,6 +228,7 @@
   }
 </style>
 
+<!-- Single Component??? 'r u NUTSSS??' -->
 <div class="game">
   <section class="section">
     <div class="container">
@@ -262,20 +270,27 @@
           <span class="tag is-light">{toss}</span>
         {/each}
       </p>
+      <p>
+        current round:
+        <span class="tag is-light">{game.rounds.length}</span>
+      </p>
     </div>
     <div class="container">
-      <Button
-        type="is-primary"
-        disabled={game.winner || game.running}
-        on:click={startGame}>
-        START
-      </Button>
+      <!-- {#if game.rounds.length} -->
       <Button
         disabled={!game.winner || game.running}
         type="is-danger"
         on:click={resetGame}>
         RESET
       </Button>
+      <!-- {:else} -->
+      <Button
+        type="is-primary"
+        disabled={game.winner || game.running}
+        on:click={startGame}>
+        START
+      </Button>
+      <!-- {/if} -->
 
       <!-- TODO: one button solution -->
       <!-- <Button
@@ -300,7 +315,7 @@
           </div>
           {#each length as col, index}
             <div class="player-line">
-              {player.p === 0 || player.p < index ? ' ' : '🐌'}
+              {player.p === 0 || player.p < index ? ' ' : player.char}
             </div>
           {/each}
         </div>
@@ -313,6 +328,13 @@
       <canvas id="myChart" width="480" height="200" />
       {#if game.winner}
         <p>Winner: {game.winner}:</p>
+        <Modal bind:active={game['winner']}>
+          <div
+            style="text-align:center;background: url(winnersnail.svg) center;
+            background-size: cover;width:621px;height:610px;">
+            <p style="padding-top:102px;font-size:62px">{game.winner}</p>
+          </div>
+        </Modal>
       {/if}
     </div>
   </section>
@@ -335,6 +357,14 @@
       <h3>Known Issues</h3>
       <ul>
         <li>500 SSR INPUT Field</li>
+      </ul>
+      <h3>I used Stuff from</h3>
+      <ul>
+        <li>
+          <a href="https://www.vecteezy.com/free-vector/snail">
+            Snail Vectors by Vecteezy
+          </a>
+        </li>
       </ul>
     </div>
   </section>
