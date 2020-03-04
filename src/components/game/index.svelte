@@ -92,7 +92,6 @@
 
   function checkWinner() {
     const winner = T.filter(el => el.p === settings.length - 1);
-    console.log({ winner });
 
     if (Boolean(winner.length)) {
       game.finished = true;
@@ -123,6 +122,7 @@
     prepareGame();
 
     game = gameDefaults;
+    game.round = 0;
     game.running = false;
     game.rounds = [];
   }

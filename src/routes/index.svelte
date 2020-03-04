@@ -11,8 +11,13 @@
       <h4 class="title is-6">tempolytseslak??</h4>
       <p>
         tempolytseslak? tempo lytse slak is friesischfor hurry up little slug or
-        german Tempo kleine Schnecke. Tempo kleine Schnecke is a board game i
-        played with my little son.
+        german Tempo kleine Schnecke (
+        <a
+          target="_blank"
+          href="https://de.wikipedia.org/wiki/Tempo,_kleine_Schnecke">
+          wiki
+        </a>
+        ). Tempo kleine Schnecke is a board game i played with my little son.
       </p>
     </div>
   </article>
